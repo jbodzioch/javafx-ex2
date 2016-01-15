@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?scenebuilder-preview-i18n-resource ../base/base.properties?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="756.0" prefWidth="731.0" xmlns="http://javafx.com/javafx/8.0.51" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.capgemini.javafx_starterkit2.controller.ImageBrowserController">
+  <columnConstraints>
+    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="193.0" minHeight="10.0" prefHeight="25.0" valignment="TOP" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="625.0" minHeight="10.0" prefHeight="625.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="124.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+  <children>
+    <ScrollPane GridPane.rowIndex="1">
+      <content>
+        <ImageView fx:id="imageView" pickOnBounds="true" preserveRatio="true" />
+      </content>
+    </ScrollPane>
+    <GridPane prefHeight="102.0" prefWidth="620.0" GridPane.rowIndex="2">
+      <columnConstraints>
+        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+      </rowConstraints>
+      <children>
+        <Button fx:id="prevButton" mnemonicParsing="false" onAction="#prevButtonAction" text="%button.prev" />
+        <Button fx:id="slideshowButton" mnemonicParsing="false" onAction="#slideshowButtonAction" text="%button.slideshow" GridPane.columnIndex="1" />
+        <Button fx:id="nextButton" mnemonicParsing="false" onAction="#nextButtonAction" text="%button.next" GridPane.columnIndex="2" />
+      </children>
+    </GridPane>
+    <GridPane>
+      <columnConstraints>
+        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+      </rowConstraints>
+      <children>
+        <Button fx:id="openButton" mnemonicParsing="false" onAction="#openButtonAction" text="%button.open" GridPane.rowIndex="1" />
+        <Label text="%label.title">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font></Label>
+      </children>
+    </GridPane>
+  </children>
+</GridPane>
