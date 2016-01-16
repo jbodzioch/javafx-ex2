@@ -40,6 +40,9 @@ public class ImageBrowserController {
 	private void openButtonAction(ActionEvent event) throws MalformedURLException {
 
 		FileChooser fileChooser = new FileChooser();
+		/*
+		 * REV: teksty powinny byc pobrane z bundle
+		 */
 		fileChooser.setTitle("Open Resource File");
 
 		ExtensionFilter mostUsedImageExtensionsFilter = new FileChooser.ExtensionFilter("Images", "*.jpg", "*.tif",
@@ -53,6 +56,9 @@ public class ImageBrowserController {
 		fileChooser.getExtensionFilters().addAll(mostUsedImageExtensionsFilter, jpgFilter, tifFilter, pngFilter,
 				gifFilter, bmpFilter);
 
+		/*
+		 * REV: okno wyboru plikow poiwnno byc modalne, new Stage() nie jesr rozwiazaniem
+		 */
 		model.setImages(fileChooser.showOpenMultipleDialog(new Stage()));
 
 		showImage();
@@ -92,6 +98,9 @@ public class ImageBrowserController {
 	private void showNoImageInformation() {
 
 		Alert alert = new Alert(Alert.AlertType.INFORMATION);
+		/*
+		 * REV: teksty powinny byc pobrane z bundle
+		 */
 		alert.setTitle("Information");
 		alert.setContentText("No image selected");
 		alert.showAndWait();

@@ -17,6 +17,7 @@
     <RowConstraints maxHeight="124.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
   </rowConstraints>
   <children>
+  <!-- REV: dobrze byloby ustawic elementy w takiej kolejnosci jak w oknie -->
     <ScrollPane GridPane.rowIndex="1">
       <content>
         <ImageView fx:id="imageView" pickOnBounds="true" preserveRatio="true" />

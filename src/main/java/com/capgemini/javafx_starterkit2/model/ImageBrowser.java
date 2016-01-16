@@ -45,6 +45,9 @@ public class ImageBrowser {
 		}
 	}
 
+	/*
+	 * REV: logika przelaczania obrazkow powinna znajdowac sie w kontrolerze
+	 */
 	public void nextAdress() {
 
 		if (!(images == null) && !images.isEmpty()) {
